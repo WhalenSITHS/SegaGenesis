@@ -1,8 +1,11 @@
 #include <genesis.h>
+#include "resources.h"
 
 int main(bool hardReset)
 {
-    VDP_drawText("Hello Genesis!", 10, 12);
+    // VRAM setup
+    u16 ind = TILE_USER_INDEX;
+    PAL_setPalette();
     while (TRUE)
     {
         SYS_doVBlankProcess();
