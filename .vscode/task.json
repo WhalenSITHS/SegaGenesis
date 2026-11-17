@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "& \"$env:GDK\\bin\\make.exe\" -f \"$env:GDK\\makefile.gen\"",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": ["$gcc"]
+    },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "& \"$env:GDK\\bin\\make.exe\" -f \"$env:GDK\\makefile.gen\" clean"
+    }
+  ]
+}
